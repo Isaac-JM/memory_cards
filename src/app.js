@@ -21,7 +21,14 @@ export class App extends LitElement {
     this.view=""
     this.addEventListener("playerName",(e)=>{
       localStorage.setItem("namePlayer",e.detail)
-      location.href="/game"
+      var enlace = document.createElement('a');
+    
+        enlace.href = '/game';
+      
+        document.body.appendChild(enlace);
+
+        enlace.click();
+
     })
   }
 

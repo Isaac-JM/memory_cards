@@ -1,5 +1,6 @@
 import { LitElement, css, html } from 'lit'
 import { TWStyles } from '../../tw.js'
+import { Router } from '@vaadin/router';
 
 /**
  * An example element.
@@ -23,7 +24,14 @@ logout(){
   localStorage.removeItem("namePlayer")
   localStorage.removeItem("score")
   localStorage.removeItem("level")
-  location.href="/home"
+  var enlace = document.createElement('a');
+    
+  enlace.href = '/home';
+
+  document.body.appendChild(enlace);
+
+  enlace.click();
+
 }
 
 
