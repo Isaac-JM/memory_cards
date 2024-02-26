@@ -40,10 +40,10 @@ export class App extends LitElement {
 
     this.view = new HomeView();
   }
-  if(url[url.length-1]!="game"){
-    url[url.length-1]==="home"?'':
-    location.href="/home"
-  }
+  // if(url[url.length-1]!="game"){
+  //   url[url.length-1]==="home"?'':
+  //   location.href="/home"
+  // }
 
   this.requestUpdate()
 
