@@ -10,19 +10,23 @@
 
 **Iniciar Proyecto:** npm run dev
 
-# Solo en el caso que necesites generar un services worker para el PWA
+**Solo en el caso que necesites generar un services worker para el PWA**
 
 **Generar Services Worker (sw.js):** workbox generateSW workbox-config.cjs
 
+-Se generará en la carpeta public, luego al realizar un **npm run build** se añadirá a la carpeta dist.
+
 ----------------------
-# Ejecutar los test de todos los componentes
+# Ejecutar tests
 ----------------------
 
 **Debes ejecutarlo desde la raiz del proyecto**
 
+**Test de todos los componentes**
+
 -npx wdio run ./wdio.conf.js
 
-**Si quieres ejecutar el test de un solo componente**
+**Test de un componente específico**
 
 - npx wdio run ./wdio.conf.js --spec "ruta_componente"
 
