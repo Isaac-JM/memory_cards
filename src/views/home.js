@@ -60,7 +60,7 @@ export class HomeView extends LitElement {
                   <div>
                   <form class="space-y-6" action="#">
                   <div class="flex justify-center">
-                    <img src="/dist/logo_game.png" class="h-[200px] w-[200px]">
+                    <img src="./logo_game.png" class="h-[200px] w-[200px]">
                   </div>
                       <div>
                           <label for="player" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
