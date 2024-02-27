@@ -33,9 +33,9 @@ export class LevelSelection extends LitElement {
 
   render() {
     return html`
-    <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8  ">
     <div class="text-center">
-      <h5 class="text-xl font-medium text-gray-900 dark:text-white">Level</h5>
+      <h5 class="text-xl font-medium text-gray-900 ">Level</h5>
     </div>
 
     <div class="pt-2">

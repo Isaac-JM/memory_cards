@@ -43,7 +43,7 @@ logout(){
 <div class="w-full flex flex-wrap items-center justify-between mx-auto p-4">
   <span class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="./logo_game.png" class="h-8" alt="logo" />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Memory Cards</span>
+      <span class="self-center text-2xl font-semibold whitespace-nowrap ">Memory Cards</span>
   </span>
 
   <span class="cursor-pointer" @click="${this.logout}">
