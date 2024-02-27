@@ -1,7 +1,7 @@
-#Juego de Memorizar Carta
+# Juego de Memorizar Cartas
 
 ----------------------
-#Iniciar proyecto local
+# Iniciar proyecto local
 ----------------------
 
 **Descargar el progecto:** git clone https://github.com/Isaac-JM/memory_cards.git 
@@ -10,12 +10,12 @@
 
 **Iniciar Proyecto:** npm run dev
 
-#Solo en el caso que necesites generar un services worker para el PWA
+# Solo en el caso que necesites generar un services worker para el PWA
 
 **Generar Services Worker (sw.js):** workbox generateSW workbox-config.cjs
 
 ----------------------
-#¿Cómo Jugar?
+# ¿Cómo Jugar?
 ----------------------
 1- Elegir Nombre del Jugador
 

@@ -24,14 +24,8 @@ logout(){
   localStorage.removeItem("namePlayer")
   localStorage.removeItem("score")
   localStorage.removeItem("level")
-  var enlace = document.createElement('a');
-    
-  enlace.href = '/home';
 
-  document.body.appendChild(enlace);
-
-  enlace.click();
-
+  location.href='/home'
 }
 
 
