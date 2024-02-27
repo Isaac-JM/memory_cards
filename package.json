@@ -8,15 +8,21 @@
     "twlit": "twlit --input ./tw.css --output ./tw.js",
     "dev": "concurrently \"npm:tailwind:watch\" \"npm:twlit\" \"vite\"",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "wdio": "wdio run ./wdio.conf.js"
   },
   "dependencies": {
     "@vaadin/router": "^1.7.5",
-    "lit": "^3.1.2",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
+    "@wdio/browser-runner": "^8.32.3",
+    "@wdio/cli": "^8.32.3",
+    "@wdio/mocha-framework": "^8.32.3",
+    "@wdio/spec-reporter": "^8.32.2",
+    "@web/dev-server-legacy": "^2.1.0",
     "concurrently": "^8.2.2",
+    "lit": "^3.1.2",
     "twlit": "^0.0.1-alpha.37",
     "vite": "^5.1.0"
   }

@@ -1,9 +1,9 @@
 import { LitElement, css, html } from 'lit'
-import { TWStyles } from '../../tw.js'
-import '../components/navbar.js'
-import '../components/level_selection.js'
-import '../components/dashboard_game.js'
-import '../components/lose_game.js'
+import { TWStyles } from '../../../tw.js'
+import '../../components/navbar/navbar.js'
+import '../../components/level_selection/level_selection.js'
+import '../../components/dashboard_games/dashboard_game.js'
+import '../../components/lose_game/lose_game.js'
 /**
  * An example element.
  *
@@ -31,7 +31,6 @@ export class GameView extends LitElement {
     })
 
     this.addEventListener("selectLose",(e)=>{
-      console.log(e.detail)
       if(e.detail=="repit"){
         this.lose=false
       }else{

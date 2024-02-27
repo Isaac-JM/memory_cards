@@ -15,6 +15,18 @@
 **Generar Services Worker (sw.js):** workbox generateSW workbox-config.cjs
 
 ----------------------
+# Ejecutar los test de todos los componentes
+----------------------
+
+**Debes ejecutarlo desde la raiz del proyecto**
+
+-npx wdio run ./wdio.conf.js
+
+**Si quieres ejecutar el test de un solo componente**
+
+- npx wdio run ./wdio.conf.js --spec "ruta_componente"
+
+----------------------
 # ¿Cómo Jugar?
 ----------------------
 1- Elegir Nombre del Jugador

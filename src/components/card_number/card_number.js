@@ -1,6 +1,6 @@
 import { LitElement, css, html } from 'lit'
-import { TWStyles } from '../../tw.js'
-import './score_game.js'
+import { TWStyles } from '../../../tw.js'
+import '../score_game/score_game.js'
 
 /**
  * An example element.

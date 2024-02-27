@@ -1,8 +1,8 @@
 import { LitElement, css, html } from 'lit'
 import { TWStyles } from '../tw.js'
 import { Router } from '@vaadin/router';
-import './views/game.js'
-import './views/home.js'
+import './views/game/game.js'
+import './views/home/home.js'
 
 /**
  * An example element.

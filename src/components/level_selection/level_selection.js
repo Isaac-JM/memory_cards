@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit'
-import { TWStyles } from '../../tw.js'
+import { TWStyles } from '../../../tw.js'
 
 /**
  * An example element.
