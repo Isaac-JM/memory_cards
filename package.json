@@ -7,7 +7,7 @@
     "tailwind:watch": "tailwindcss -i ./tailwindlib.css -o ./tw.css --watch",
     "twlit": "twlit --input ./tw.css --output ./tw.js",
     "dev": "concurrently \"npm:tailwind:watch\" \"npm:twlit\" \"vite\" \"workbox generateSW workbox-config.cjs\"",
-    "build": "vite build",
+    "build": "concurrently \"vite build\" \"workbox generateSW workbox-config.cjs\"",
     "preview": "vite preview"
   },
   "dependencies": {
