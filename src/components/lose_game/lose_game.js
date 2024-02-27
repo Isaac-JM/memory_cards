@@ -40,7 +40,7 @@ export class LoseGame extends LitElement {
 
     <div class="pt-2">
         <form class="space-y-6" action="#">
-        <button @click="${this.selectLose}" type="button" class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4   font-medium rounded-lg text-sm px-5 py-2.5 text-center" value="repit">Repit</button>
+        <button @click="${this.selectLose}" type="button" class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4   font-medium rounded-lg text-sm px-5 py-2.5 text-center" value="repeat">Repeat</button>
         <button @click="${this.selectLose}" type="button" class="w-full text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center" value="level">Change level</button>
         </form>
     </div>

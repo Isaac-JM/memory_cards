@@ -31,7 +31,7 @@ export class GameView extends LitElement {
     })
 
     this.addEventListener("selectLose",(e)=>{
-      if(e.detail=="repit"){
+      if(e.detail=="repeat"){
         this.lose=false
       }else{
         this.lose=false
