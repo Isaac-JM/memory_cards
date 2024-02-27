@@ -8,13 +8,13 @@
     "start_url": "./",
     "screenshots": [
         {
-            "src": "/dist/logo.png",
+            "src": "./logo.png",
             "type": "image/png",
             "sizes": "512x512",
             "form_factor": "wide"
         },
         {
-            "src": "/dist/logo.png",
+            "src": "./logo.png",
             "type": "image/png",
             "sizes": "512x512",
             "form_factor": "narrow"
@@ -22,7 +22,7 @@
     ],
     "icons": [
         {
-            "src": "/dist/logo.png",
+            "src": "./logo.png",
             "type": "image/png",
             "sizes": "512x512"
         }
