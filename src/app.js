@@ -21,7 +21,6 @@ export class App extends LitElement {
     this.view=""
     this.addEventListener("playerName",(e)=>{
       localStorage.setItem("namePlayer",e.detail)
-
       location.href='/game'
     })
   }

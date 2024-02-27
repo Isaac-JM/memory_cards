@@ -49,6 +49,7 @@ export class DashboardGame extends LitElement {
     const level=localStorage.getItem("level")
     let time=0;
     this.next=this.next+1;
+    
     switch(level){
         case 'easy':
             time=10000
@@ -61,10 +62,13 @@ export class DashboardGame extends LitElement {
         break;
     }
     this.randomNumber=Math.floor(Math.random() * 9) + 1;
+
     setTimeout(()=>{ 
-    this.message=`Where is the number ${this.randomNumber}?`,
-    this.select_card=true,
-    this.requestUpdate()},time)
+      this.message=`Where is the number ${this.randomNumber}?`,
+      this.select_card=true,
+      this.requestUpdate()
+    },time)
+
     this.requestUpdate()
   }
 
@@ -87,9 +91,10 @@ export class DashboardGame extends LitElement {
         }
 
         const interval=setInterval(()=>{this.countdown--,this.requestUpdate()},1000)
-        setTimeout(function() {
-          clearInterval(interval);
-      }, time);
+
+          setTimeout(function() {
+            clearInterval(interval);
+          }, time);
     }
 
   async connectedCallback(){
