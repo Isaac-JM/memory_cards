@@ -22,7 +22,7 @@ export class GameView extends LitElement {
   constructor() {
     super()
     this.messageLogin = {}
-    this.playerName=""
+    this.playerName=localStorage.getItem("namePlayer")?localStorage.getItem("namePlayer"):''
     this.lose=false;
     this.level=localStorage.getItem("level")?localStorage.getItem("level"):''
     this.addEventListener("selectLevel",(e)=>{
