@@ -20,6 +20,7 @@ export class LoseGame extends LitElement {
 
 
   selectLose(e) {
+    localStorage.removeItem("score")
     const event = new CustomEvent('selectLose', {
       detail: e.target.value,
       bubbles: true,

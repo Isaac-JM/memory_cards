@@ -26,6 +26,7 @@ export class DashboardGame extends LitElement {
     this.correct_number="";
     this.score=0;
     this.next=0;
+    this.countdown=0;
     this.addEventListener("cardValue",this.checkNumber)
 
   }
@@ -44,6 +45,7 @@ export class DashboardGame extends LitElement {
 
   changeMessage(){
     this.message="Memorize the cards..."
+    this.countDown()
     const level=localStorage.getItem("level")
     let time=0;
     this.next=this.next+1;
@@ -65,6 +67,30 @@ export class DashboardGame extends LitElement {
     this.requestUpdate()},time)
     this.requestUpdate()
   }
+
+    countDown(){
+        const level=localStorage.getItem("level")
+        let time=0;
+        switch(level){
+            case 'easy':
+              this.countdown=10
+              time=10000
+            break;
+            case 'medium':
+              this.countdown=5
+              time=5000
+            break;
+            case 'hard':
+              this.countdown=2
+              time=2000
+            break;
+        }
+
+        const interval=setInterval(()=>{this.countdown--,this.requestUpdate()},1000)
+        setTimeout(function() {
+          clearInterval(interval);
+      }, time);
+    }
 
   async connectedCallback(){
     super.connectedCallback();
@@ -122,7 +148,7 @@ export class DashboardGame extends LitElement {
 
     <div class="pt-2">
         <div class="text-center">
-            <span>${this.message}</span>
+            <span>${this.message} ${this.countdown>0?this.countdown:''}</span>
         </div>
         <board-game correct_number="${this.randomNumber}" ?select_card=${this.select_card} next=${this.next}></board-game>
     </div>

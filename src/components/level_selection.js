@@ -21,6 +21,7 @@ export class LevelSelection extends LitElement {
 
   selectLevel(e) {
     localStorage.setItem("level",e.target.value)
+    localStorage.removeItem("score")
     const event = new CustomEvent('selectLevel', {
       detail: e.target.value,
       bubbles: true,
