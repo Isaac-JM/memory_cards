@@ -120,10 +120,6 @@ export class DashboardGame extends LitElement {
         setTimeout(()=>{ this.changeMessage()},2000)
     }else{
 
-      if ("vibrate" in navigator) {
-          navigator.vibrate(2000);
-      }
-      
         this.score=0
         setTimeout(()=>{ 
             const event = new CustomEvent('loseGame', {
