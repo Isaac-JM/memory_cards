@@ -16,7 +16,8 @@ export class CardNumber extends LitElement {
         hidden:{type:Boolean},
         correct_number:{type:Number},
         select_card:{type:Boolean},
-        next:{type:Number}
+        next:{type:Number},
+        countdown:{type:Number}
     };
   }
 
@@ -28,34 +29,13 @@ export class CardNumber extends LitElement {
     this.numberClass=""
     this.select_card=false;
     this.next=0;
+    this.countdown=0;
 
   }
 
 
   async connectedCallback(){
     super.connectedCallback();
-    this.hidden_number();
-  }
-
-  hidden_number(){
-    const level=localStorage.getItem("level")
-    let time=0;
-
-    switch(level){
-      case 'easy':
-          time=10000
-      break;
-      case 'medium':
-          time=5000
-      break;
-      case 'hard':
-          time=2000
-      break;
-  }
-
-      setTimeout(()=>{
-        this.hidden=true;
-      },time)
   }
 
   selectCard(){
@@ -80,7 +60,11 @@ export class CardNumber extends LitElement {
   shouldUpdate(changedProperties) {
     
     changedProperties.has('next') && this.next>0?
-    (this.hidden=false,this.hidden_number(),this.numberClass="",this.requestUpdate()):''
+    (this.hidden=false,this.numberClass="",this.requestUpdate()):''
+    console.log(this.countdown)
+    changedProperties.has('countdown') && this.countdown===0?
+    this.hidden=true:''
+   
     return true
   }
 

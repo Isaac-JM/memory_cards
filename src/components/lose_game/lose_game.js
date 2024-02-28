@@ -35,7 +35,8 @@ export class LoseGame extends LitElement {
     return html`
     <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8  ">
     <div class="text-center">
-      <h5 class="text-xl font-medium text-gray-900 ">You have failed..</h5>
+      <h5 class="text-xl font-medium text-gray-900 ">${localStorage.getItem("namePlayer")}</h5>
+      <h5 class="text-xl font-medium text-gray-900 ">Score: ${localStorage.getItem("score")?localStorage.getItem("score"):0}</h5>
     </div>
 
     <div class="pt-2">

@@ -27,7 +27,13 @@ export class DashboardGame extends LitElement {
     this.score=0;
     this.next=0;
     this.countdown=0;
+    this.interval;
     this.addEventListener("cardValue",this.checkNumber)
+    this.addEventListener("resetGame",(e)=>{
+      clearInterval(this.interval)
+      this.changeMessage(),
+      this.score=0,
+      this.requestUpdate()})
 
   }
 
@@ -64,9 +70,11 @@ export class DashboardGame extends LitElement {
     this.randomNumber=Math.floor(Math.random() * 9) + 1;
 
     setTimeout(()=>{ 
+      if(this.countdown==0){
       this.message=`Where is the number ${this.randomNumber}?`,
       this.select_card=true,
       this.requestUpdate()
+      }
     },time)
 
     this.requestUpdate()
@@ -90,8 +98,8 @@ export class DashboardGame extends LitElement {
             break;
         }
 
-        const interval=setInterval(()=>{this.countdown--,this.requestUpdate()},1000)
-
+        this.interval=setInterval(()=>{this.countdown--,this.requestUpdate()},1000)
+        const interval=this.interval
           setTimeout(function() {
             clearInterval(interval);
           }, time);
@@ -155,7 +163,7 @@ export class DashboardGame extends LitElement {
         <div class="text-center">
             <span>${this.message} ${this.countdown>0?this.countdown:''}</span>
         </div>
-        <board-game correct_number="${this.randomNumber}" ?select_card=${this.select_card} next=${this.next}></board-game>
+        <board-game correct_number="${this.randomNumber}" ?select_card=${this.select_card} next=${this.next} countdown=${this.countdown}></board-game>
     </div>
 
 </div>

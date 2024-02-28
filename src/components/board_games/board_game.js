@@ -9,7 +9,8 @@ export class BoardGame extends LitElement {
     return {
       correct_number:{type:Number},
       select_card:{type:Boolean},
-      next:{type:Number}
+      next:{type:Number},
+      countdown:{type:Number}
     };
   }
 
@@ -19,6 +20,7 @@ export class BoardGame extends LitElement {
     this.correct_number=0
     this.select_card=false
     this.next=0;
+    this.countdown=0;
 
   }
 
@@ -44,7 +46,7 @@ export class BoardGame extends LitElement {
       ${this.listNumbers.map((res)=>{
         return html`
         <div class="col-span-4">
-          <card-number number="${res}" correct_number=${this.correct_number} ?select_card=${this.select_card} next=${this.next}></card-number>
+          <card-number countdown="${this.countdown}" number="${res}" correct_number=${this.correct_number} ?select_card=${this.select_card} next=${this.next}></card-number>
         </div>
       `
       })}
