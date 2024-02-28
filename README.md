@@ -17,6 +17,18 @@
 - Se generará en la carpeta public, luego al realizar un **npm run build** se añadirá a la carpeta dist.
 
 ----------------------
+# Librerías Utilizadas
+---------------------
+
+- **Para desarrollar los componentes**: LitElement
+
+- **Para el tema de rutas:** Vaadin Router
+
+- **Para el testing:** Wdio
+
+- **Para los estilos de la app:** Tailwindcss con Twlit
+
+----------------------
 # Ejecutar tests
 ----------------------
 
